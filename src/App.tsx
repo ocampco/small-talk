@@ -6,8 +6,13 @@ import locales, {
   LOCALE_NOT_SELECTED,
 } from './constants/locales';
 
+type URLParams = {
+  nativePath?: string,
+  translationPath?: string,
+};
+
 const App = () => {
-  const { nativePath, translationPath } = useParams();
+  const { nativePath, translationPath }: URLParams = useParams();
   // TODO: Make distinction between not found and not given
   const nativeLocale: Locale = locales.get(nativePath)
     || LOCALE_DEFAULT;
