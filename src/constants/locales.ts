@@ -13,10 +13,13 @@ const LOCALE_THAI: Locale = {
   display: 'Thai',
 };
 
-// TODO: Refactor to be smarter?
-const locales: Record<string, Locale> = {
-  [LOCALE_ENGLISH.code]: LOCALE_ENGLISH,
-  [LOCALE_THAI.code]: LOCALE_THAI,
-};
 
-export default locales;
+const localesArray: Locale[] = [LOCALE_ENGLISH, LOCALE_THAI];
+const localesMap: Map<string | undefined, Locale> = new Map();
+
+localesArray.map(
+  (locale: Locale) => localesMap.set(locale.code, locale)
+);
+
+export const LOCALE_DEFAULT: Locale = LOCALE_ENGLISH;
+export default localesMap;

@@ -8,7 +8,7 @@ type OptionsType = {
 };
 
 const routes: RouteObject[] = [{
-  path: '/:nativeLocale?/:translationLocale?',
+  path: '/:nativePath?/:translationPath?',
   element: <App />,
 }];
 
