@@ -27,7 +27,10 @@ const App = () => {
       <h1>small talk translator</h1>
       <label>translate from:</label><span>{nativeLocale.display}</span>
       <label>translate to:</label><span>{translationLocale.display}</span>
-      <TranslationContainer />
+      <TranslationContainer
+        nativeLocale={nativeLocale}
+        translationLocale={translationLocale}
+      />
     </>
   );
 };
