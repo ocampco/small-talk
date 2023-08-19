@@ -1,6 +1,6 @@
 export type Locale = {
-  readonly code: string;
-  readonly display: string;
+  readonly code: string,
+  readonly display: string,
 };
 
 const LOCALE_ENGLISH: Locale = {

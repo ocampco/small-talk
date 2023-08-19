@@ -7,8 +7,8 @@ import locales, {
 } from './constants/locales';
 
 type URLParams = {
-  nativePath?: string,
-  translationPath?: string,
+  readonly nativePath?: string,
+  readonly translationPath?: string,
 };
 
 const App = () => {
