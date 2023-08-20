@@ -13,14 +13,23 @@ const LOCALE_THAI: Locale = {
   display: 'thai',
 };
 
+const LOCALE_SPANISH: Locale = {
+  code: 'es',
+  display: 'spanish',
+};
+
 export const LOCALE_DEFAULT: Locale = LOCALE_ENGLISH;
 // TODO: URL Logic for not selected
 export const LOCALE_NOT_SELECTED: Locale = {
   code: '',
   display: 'please select',
-}
+};
 
-const localesArray: Locale[] = [LOCALE_ENGLISH, LOCALE_THAI];
+const localesArray: Locale[] = [
+  LOCALE_ENGLISH,
+  LOCALE_THAI,
+  LOCALE_SPANISH,
+];
 const localesMap: Map<string | undefined, Locale> = new Map();
 
 localesArray.map(

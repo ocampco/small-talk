@@ -28,8 +28,8 @@ const App = () => {
       <label>translate from:</label><span>{nativeLocale.display}</span>
       <label>translate to:</label><span>{translationLocale.display}</span>
       <TranslationContainer
-        nativeLocale={nativeLocale}
-        translationLocale={translationLocale}
+        nativeLocaleCode={nativeLocale.code}
+        translationLocaleCode={translationLocale.code}
       />
     </>
   );
