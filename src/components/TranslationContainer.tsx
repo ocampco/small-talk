@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
-import { TransformedResponse } from './../transformResponse';
-import translateService from './../services/translateService';
+// import { useEffect, useState } from 'react';
+// import phrases from './../constants/phrases';
 
 type TranslationContainerProps = {
   nativeLocaleCode?: string,
@@ -11,40 +10,29 @@ const TranslationContainer = ({
   nativeLocaleCode,
   translationLocaleCode,
 }: TranslationContainerProps) => {
-  const [translations, setTranslations] = useState<TransformedResponse[]>([]);
+  // let translations: TransformedResponse[] = [];
 
-  useEffect(() => {
-    // TODO: Handle non-200
-    const fetchTranslations = async () => {
-      const response: TransformedResponse = await translateService.translate(
-        'thank you',
-        nativeLocaleCode,
-        translationLocaleCode,
-      );
+  // TODO: Handle non-200
+  // const fetchTranslation = (phrase: string) =>
+  //   translateService.translate(
+  //     phrase,
+  //     nativeLocaleCode,
+  //     translationLocaleCode,
+  //   );
 
-      const newTranslations: TransformedResponse[] = [
-        ...translations,
-        response,
-      ];
-
-      setTranslations(newTranslations);
-      return response;
-    };
-
-    // TODO: Refactor when fetching multiple translations
-    if (nativeLocaleCode && translationLocaleCode) {
-      console.log('translationLocaleCode=', translationLocaleCode);
-      fetchTranslations();
-    };
-
-  }, [nativeLocaleCode, translationLocaleCode]);
+  // const fetchTranslations = () => {
+  //   phrases.forEach(async (phrase) => {
+  //     if (translations.length !== phrases.length) {
+  //       const translation = await fetchTranslation(phrase);
+  //       translations.push(translation);
+  //       console.log('pushing translation=', translation);
+  //     };
+  //   });
+  // };
 
   return (
     <>
       <h2>translation</h2>
-      { translations.map(({ from, to }) =>
-         <div key={from}>{from} - {to}</div>
-      )}
     </>
   );
 };

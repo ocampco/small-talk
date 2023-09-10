@@ -25,15 +25,10 @@ export const LOCALE_NOT_SELECTED: Locale = {
   display: 'please select',
 };
 
-const localesArray: Locale[] = [
+const locales: Locale[] = [
   LOCALE_ENGLISH,
   LOCALE_THAI,
   LOCALE_SPANISH,
 ];
-const localesMap: Map<string | undefined, Locale> = new Map();
 
-localesArray.map(
-  (locale: Locale) => localesMap.set(locale.code, locale)
-);
-
-export default localesMap;
+export default locales;

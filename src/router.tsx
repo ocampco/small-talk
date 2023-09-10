@@ -8,7 +8,7 @@ type OptionsType = {
 };
 
 const routes: RouteObject[] = [{
-  path: '/:nativePath?/:translationPath?',
+  path: '/phrases',
   element: <App />,
 }];
 

@@ -1,29 +1,30 @@
-import { Navigate, useParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import TranslationContainer from './components/TranslationContainer';
-import locales, {
+import getLocales from './components/getLocale';
+import {
   Locale,
   LOCALE_DEFAULT,
   LOCALE_NOT_SELECTED,
 } from './constants/locales';
+import {
+  SEARCH_PARAM_NATIVE,
+  SEARCH_PARAM_TRANSLATION,
+} from './constants/config';
 
-type URLParams = {
-  readonly nativePath?: string,
-  readonly translationPath?: string,
-};
+type Param = string | null;
 
 const App = () => {
-  const { nativePath, translationPath }: URLParams = useParams();
-  // TODO: Make distinction between not found and not given
-  const nativeLocale: Locale = locales.get(nativePath)
-    || LOCALE_DEFAULT;
-  const translationLocale: Locale = locales.get(translationPath)
-    || LOCALE_NOT_SELECTED;
+  const [searchParams] = useSearchParams();
+  const nativeParam: Param = searchParams.get(SEARCH_PARAM_NATIVE);
+  const translationParam: Param = searchParams.get(SEARCH_PARAM_TRANSLATION);
+  // TODO: Add better logic with routing
+  const nativeLocale: Locale =
+    getLocales(nativeParam) || LOCALE_DEFAULT;
+  const translationLocale: Locale =
+    getLocales(translationParam) || LOCALE_NOT_SELECTED;
 
   return (
     <>
-      { !nativePath &&
-        <Navigate to={nativeLocale.code} replace={true} />
-      }
       <h1>small talk translator</h1>
       <label>translate from:</label><span>{nativeLocale.display}</span>
       <label>translate to:</label><span>{translationLocale.display}</span>
