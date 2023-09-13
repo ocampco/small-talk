@@ -1,5 +1,6 @@
 import { useSearchParams } from 'react-router-dom';
 import LanguageSelect from './LanguageSelect';
+import Translations from './Translations';
 import { SEARCH_PARAM_TRANSLATION } from './../constants/config';
 
 const TranslateContainer = () => {
@@ -9,6 +10,7 @@ const TranslateContainer = () => {
   return (
     <>
       <LanguageSelect toCode={toCode} />
+      { toCode && <Translations toCode={toCode} />}
     </>
   );
 };

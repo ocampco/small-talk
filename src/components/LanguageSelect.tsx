@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom';
 import { SEARCH_PARAM_TRANSLATION } from '../constants/config';
 import locales, { Locales } from '../constants/locales';
 import Code from '../constants/code';
+import styles from './LanguageSelect.module.css';
 
 type LanguageSelectProps = {
   readonly options?: Locales,
@@ -35,16 +36,23 @@ const LanguageSelect = ({
   };
 
   return (
-    <select value={selectedValue} onChange={handleChange}>
-      { Object
-        .values(options)
-        .map(({ code, display }) => (
-          <option value={code} key={code}>
-            {display}
-          </option>
-      ))}
-    </select>
-  )
+    <div className={styles.container}>
+      <h2 className={styles.heading}>translate</h2>
+      <select
+        value={selectedValue}
+        onChange={handleChange}
+        className={styles.select}
+      >
+        { Object
+          .values(options)
+          .map(({ code, display }) => (
+            <option value={code} key={code}>
+              {display}
+            </option>
+        ))}
+      </select>
+    </div>
+  );
 };
 
 export default LanguageSelect;
