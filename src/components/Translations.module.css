@@ -10,11 +10,13 @@
 }
 
 .native {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
+  font-weight: 500;
   margin-bottom: 1rem;
 }
 
 .translation {
   font-style: italic;
+  font-weight: 300;
   margin-bottom: 0.5rem;
 }

@@ -7,13 +7,25 @@
   padding: 0.5rem 1rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
   background-color: white;
+  margin-bottom: 0.5rem;
 }
 
 .heading {
   font-size: 1.5rem;
+  font-weight: 500;
+  color: #118ab2;
+}
+
+.emoji {
+  margin-right: 0.5rem;
+  line-height: 1;
 }
 
 .select {
   font-size: 1.5rem;
+  font-weight: 400;
   border: none;
+  border-radius: 0.25rem;
+  background-color: #118ab2;
+  color: #ffffff;
 }

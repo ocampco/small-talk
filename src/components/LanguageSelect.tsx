@@ -37,7 +37,16 @@ const LanguageSelect = ({
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.heading}>translate</h2>
+      <h2 className={styles.heading}>
+        <span
+          role='img'
+          aria-label='speech balloon'
+          className={styles.emoji}
+        >
+          💬
+        </span>
+        small talk
+      </h2>
       <select
         value={selectedValue}
         onChange={handleChange}
