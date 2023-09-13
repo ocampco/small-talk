@@ -1,5 +1,6 @@
 import { RouteObject, createBrowserRouter } from 'react-router-dom';
 import App from './App';
+import TranslateContainer from './components/TranslateContainer';
 import { ROUTES_BASENAME } from './constants/config';
 
 // TODO: Do I need to have this here?
@@ -8,8 +9,11 @@ type OptionsType = {
 };
 
 const routes: RouteObject[] = [{
-  path: '/translate',
+  path: '/',
   element: <App />,
+}, {
+  path: '/translate',
+  element: <TranslateContainer />,
 }];
 
 const options: OptionsType  = {

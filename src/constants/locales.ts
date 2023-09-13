@@ -5,6 +5,7 @@ export type Locale = {
   readonly display: string,
 };
 
+// TODO: Use Code enum for key
 export type Locales = {
   readonly [key: string]: Locale
 };
