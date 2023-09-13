@@ -2,6 +2,7 @@ import { ChangeEvent, useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { SEARCH_PARAM_TRANSLATION } from '../constants/config';
 import locales, { Locales } from '../constants/locales';
+import Code from '../constants/code';
 
 type LanguageSelectProps = {
   readonly options?: Locales,
@@ -14,7 +15,7 @@ const LanguageSelect = ({
   options = locales,
   toCode,
 }: LanguageSelectProps) => {
-  const [selectedValue, setSelectedValue] = useState();
+  const [selectedValue, setSelectedValue] = useState<Code | undefined>();
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
