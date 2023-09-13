@@ -1,7 +1,7 @@
-import * as codes from './codes';
+import Code from './code';
 
 export type Locale = {
-  readonly code: string,
+  readonly code: Code,
   readonly display: string,
 };
 
@@ -10,18 +10,18 @@ export type Locales = {
 };
 
 const LOCALE_EN: Locale = {
-  code: codes.CODE_EN,
+  code: Code.CODE_EN,
   display: 'english',
 };
 
 const LOCALE_TH: Locale = {
-  code: codes.CODE_TH,
+  code: Code.CODE_TH,
   display: 'thai',
 };
 
 const locales: Locales = {
-  [codes.CODE_EN]: LOCALE_EN,
-  [codes.CODE_TH]: LOCALE_TH,
+  [Code.CODE_EN]: LOCALE_EN,
+  [Code.CODE_TH]: LOCALE_TH,
 };
 
 export default locales;
