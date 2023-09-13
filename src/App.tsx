@@ -1,3 +1,3 @@
-const App = () => (<h1>App.js</h1>);
+const App = () => (<h1>App.tsx</h1>);
 
 export default App;

@@ -1,6 +1,6 @@
 import Code from './code';
 
-export type Locale = {
+type Locale = {
   readonly code: Code,
   readonly display: string,
 };

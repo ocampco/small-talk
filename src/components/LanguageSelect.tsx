@@ -21,7 +21,6 @@ const LanguageSelect = ({
   useEffect(() => {
     // @ts-ignore
     if (toCode in options) setSelectedValue(toCode);
-
   }, [toCode, options]);
 
   const handleChange = (event: ChangeEvent) => {
