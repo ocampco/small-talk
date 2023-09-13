@@ -1,5 +1,5 @@
 import { useSearchParams } from 'react-router-dom';
-import LanguageContainer from './components/LanguageContainer';
+import LanguageSelect from './components/LanguageSelect';
 import { SEARCH_PARAM_TRANSLATION } from './constants/config';
 
 const App = () => {
@@ -9,7 +9,7 @@ const App = () => {
   return (
     <>
       <h1>small talk translator</h1>
-      <LanguageContainer toCode={toCode} />
+      <LanguageSelect toCode={toCode} />
     </>
   );
 };
