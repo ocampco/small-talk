@@ -1,5 +1,6 @@
 import { ChangeEvent, useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import Emoji from './Emoji';
 import { SEARCH_PARAM_TRANSLATION } from '../constants/config';
 import locales, { Locales } from '../constants/locales';
 import Code from '../constants/code';
@@ -38,13 +39,7 @@ const LanguageSelect = ({
   return (
     <div className={styles.container}>
       <h2 className={styles.heading}>
-        <span
-          role='img'
-          aria-label='speech balloon'
-          className={styles.emoji}
-        >
-          💬
-        </span>
+        <Emoji emoji='💬' label='speech balloon' />
         small talk
       </h2>
       <select
@@ -54,9 +49,9 @@ const LanguageSelect = ({
       >
         { Object
           .values(options)
-          .map(({ code, display }) => (
+          .map(({ code, display, emoji }) => (
             <option value={code} key={code}>
-              {display}
+              {emoji} {display}
             </option>
         ))}
       </select>
