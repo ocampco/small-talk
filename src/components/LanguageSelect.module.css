@@ -7,7 +7,6 @@
   padding: 0.5rem 1rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 3px;
   background-color: white;
-  margin-bottom: 0.5rem;
 }
 
 .heading {
@@ -22,6 +21,7 @@
 }
 
 .select {
+  padding: 0.25rem 0.5rem;
   font-size: 1.5rem;
   font-weight: 400;
   border: none;

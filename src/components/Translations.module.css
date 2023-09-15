@@ -3,14 +3,12 @@
 }
 
 .item {
-  margin-bottom: 1rem;
   /* TODO: Share color */
   border-bottom: 1px solid #E5E3E8;
-  padding: 0.5rem 0;
+  padding: 1.25rem 0;
 }
 
 .native {
-  font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }
@@ -19,4 +17,8 @@
   font-style: italic;
   font-weight: 300;
   margin-bottom: 0.5rem;
+}
+
+.translation:last-child {
+  margin-bottom: 0;
 }
