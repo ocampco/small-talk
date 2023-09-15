@@ -1,11 +1,15 @@
 .list {
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .item {
   /* TODO: Share color */
   border-bottom: 1px solid #E5E3E8;
-  padding: 1.25rem 0;
+  padding: 1.5rem 0;
+}
+
+.item:last-child {
+  border-bottom: none;
 }
 
 .native {
