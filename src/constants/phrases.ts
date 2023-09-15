@@ -16,12 +16,12 @@ const PHRASE_EN: Phrase = [
 ];
 
 const PHRASE_TH: Phrase = [
-  ['sa-wat-dee krap', 'sa-wat-dee ka'],
-  ['kop kun krap', 'kop kun ka'],
-  ['chai krap', 'chai ka'],
-  ['chai mai krap', 'chai mai ka'],
-  ['kor toht krap', 'kor toht ka'],
-  ['kor toht krap', 'kor toht ka'],
+  ['(masculine) sa-wat-dee krap', '(feminine) sa-wat-dee ka'],
+  ['(masculine) kop kun krap', '(feminine) kop kun ka'],
+  ['(masculine) chai krap', '(feminine) chai ka'],
+  ['(masculine) chai mai krap', '(feminine) chai mai ka'],
+  ['(masculine) kor toht krap', '(feminine) kor toht ka'],
+  ['(masculine) kor toht krap', '(feminine) kor toht ka'],
 ];
 
 const phrases = {
